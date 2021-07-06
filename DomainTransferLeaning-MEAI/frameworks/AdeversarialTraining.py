@@ -111,10 +111,13 @@ class AdeversarialTrainingFramework:
         #             100 * total_hit_d / total_num_d,
         #             ) + '\r')
 
-        return running_D_loss / (i + 1), running_F_loss / (i + 1), total_hit / total_num
+        return running_D_loss / (i + 1), running_F_loss / (i + 1), total_hit / total_num * 100
 
     def train(self, epoch=30):
-        # 訓練200 epochs
+        if(self.opt.ckpt_name != ''):
+            self.model = self.__initi_model__(model=self.model,ckpt=self.opt.ckpt_name)
+            pass
+
         pre_train_acc = 0
         view_s = {
             "source_acc":[],
@@ -128,7 +131,7 @@ class AdeversarialTrainingFramework:
             if pre_train_acc < train_acc:
                 # torch.save(self.model.extractor_model.state_dict(), f'extractor_model.bin')
                 # torch.save(self.model.label_predictor.state_dict(), f'predictor_model.bin')
-                path = "output/" + str(self.source_classes) + "-" + str(self.target_classes) + "-" + self.opt.notes +'model.bin'
+                path = "output/" + str(self.source_classes) + "-" + str(self.target_classes) + "-" + self.opt.notes + "-" + 'model.bin'
                 torch.save(self.model.state_dict(), path)
 
             pre_train_acc = train_acc
@@ -140,7 +143,7 @@ class AdeversarialTrainingFramework:
             view_s["epoch"].append(epoch)
 
             if(epoch%10):
-                path = "output/" + str(self.source_classes) + "-" + str(self.target_classes) + "-acc.json"
+                path = "output/" + str(self.source_classes) + "-" + str(self.target_classes) + "-" + self.opt.notes + "-acc.json"
                 dump(view_s , path)
 
             logger.info(
@@ -148,24 +151,25 @@ class AdeversarialTrainingFramework:
                                                                                                  train_F_loss,
                                                                                                  train_acc,
                                                                                                  target_acc))
-        path = "output/" + str(self.source_classes) + "-" + str(self.target_classes) + "-" + self.opt.notes +'model.bin'
-        logger.info("完成训练")
-        logger.info("模型ckpt被存储在 " + path)
+        name = "checkpoint is saved in " + str(self.source_classes) + "-" + str(self.target_classes) + "-" + self.opt.notes + f'model.bin'
+        logger.info("Complete training")
+        logger.info(name)
         # path = str(self.source_classes) + "" + str(self.target_classes) + "-" + self.opt.notes + 'model.bin'
     def target_inference(self, model, ckpt=None):
 
         model.eval()
-        if ckpt is None:
-            pass
-        else:
-            if ckpt != 'none':
-                state_dict = self.__load_model__(ckpt)
-                own_state = model.state_dict()
-                for name, param in state_dict.items():
-                    if name not in own_state:
-                        continue
-                    own_state[name].copy_(param)
-
+        # if ckpt is None:
+        #     pass
+        # else:
+        #     if ckpt != 'none':
+        #         state_dict = self.__load_model__(ckpt)
+        #         own_state = model.state_dict()
+        #         for name, param in state_dict.items():
+        #             if name not in own_state:
+        #                 continue
+        #             own_state[name].copy_(param)
+        model = self.__initi_model__(model=model,ckpt=ckpt)
+        model.eval()
         result = []
 
         total_hit = 0
@@ -198,11 +202,27 @@ class AdeversarialTrainingFramework:
         return: Checkpoint dict
         '''
         if os.path.isfile(ckpt):
+
             checkpoint = torch.load(ckpt)
             print("Successfully loaded checkpoint '%s'" % ckpt)
             return checkpoint
         else:
             raise Exception("No checkpoint found at '%s'" % ckpt)
+
+    def __initi_model__(self,model, ckpt):#确保传引用
+
+        if ckpt is None:
+            pass
+        else:
+            if ckpt != 'none':
+                state_dict = self.__load_model__(ckpt)
+                own_state = model.state_dict()
+                for name, param in state_dict.items():
+                    if name not in own_state:
+                        continue
+                    own_state[name].copy_(param)
+
+        return model
 
     def item(self, x):
         '''

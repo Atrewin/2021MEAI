@@ -22,8 +22,22 @@
 
 ## Training
 
->> python main.py --source source_data_root --target_data_ root --batch_size 16
->>> 如数据集1迁移数据2：python main.py --source data/datasets/train_val/train --data/datasets/NEU-CLS --batch_size 16
+> python main.py --source source_data_root --target_data_root --batch_size 16
+### 数据集1迁移数据2(zero-shot)：  
+> python main.py --source data/datasets/train_val/train --target data/datasets/NEU-CLS --batch_size 16  
+### 数据集2迁移数据1((zero-shot)):  
+> python main.py --source data/datasets/NEU-CLS --target data/datasets/train_val/train --batch_size 16  
+### 在数据集2 fine-tuning  
+> CUDA_VISIBLE_DEVICES=0 python main.py --source data/datasets/NEU-CLS --target data/datasets/train_val/train --batch_size 16 --ckpt_name output/9-6-model.bin --notes fine-tuning-on-two
+### ### 在数据集1 fine-tuning  
+> CUDA_VISIBLE_DEVICES=3 python main.py --source data/datasets/train_val/train --target data/datasets/NEU-CLS --batch_size 16 --ckpt_name output/6-9-model.bin --notes fine-tuning-on-one
+`注：--ckpt_name 为以其他领域为source domain的模型导出参数文件`
+
+>CUDA_VISIBLE_DEVICES=2 python main.py --source data/datasets/train_val/train --target data/datasets/NEU-CLS --batch_size 16  
+
+>CUDA_VISIBLE_DEVICES=1 python main.py --source data/datasets/NEU-CLS --target data/datasets/train_val/train --batch_size 16  
+
+--only_test_target
 
 ## Testing
 >> python main.py --source source_data_root --target_data_ root --batch_size 16 --only_test_target --load_ckpt ckpt_path

@@ -18,6 +18,8 @@ def main():
 
     parser.add_argument('--source', default='data/datasets/train_val/train', help='source file')
     parser.add_argument('--target', default='data/datasets/NEU-CLS', help='target file')
+    parser.add_argument('--epoch', default=100, type=int, help='epoch number ')
+
     # 几点
     # model training parameters
     parser.add_argument('--trainN', default=2, type=int, help='N in train')  # 固定trainN=2
@@ -93,6 +95,7 @@ def main():
     logger.info("log id: {}".format(nowTime))
     logger.info("source domain: {}".format(opt.source))
     logger.info("target domain: {}".format(opt.target))
+    logger.info("target domain: {}".format(opt.notes))
     logger.info("#" * 30)
 
     #  构造模型   @jinhui 将整个模型框架传入的设计会更加优雅
@@ -136,7 +139,7 @@ def main():
                                               class_criterion, domain_criterion, optimizer,
                                               source_classes, target_classes, opt)
     if(not opt.only_test_target):
-        farmework.train()
+        farmework.train(epoch = opt.epoch)
         acc = farmework.target_inference(model)
         print(acc)
     else:
