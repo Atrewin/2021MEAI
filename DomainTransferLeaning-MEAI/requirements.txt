@@ -1,0 +1,124 @@
+antlr4-python3-runtime==4.8
+appdirs==1.4.4
+ase==3.21.1
+backports.weakref==1.0rc1
+bleach==1.5.0
+blis==0.7.4
+brotlipy==0.7.0
+catalogue==1.0.0
+certifi==2020.12.5
+cffi @ file:///tmp/build/80754af9/cffi_1600699165083/work
+chardet @ file:///home/conda/feedstock_root/build_artifacts/chardet_1602255305250/work
+click==7.1.2
+commentjson==0.8.2
+contextvars==2.4
+cryptography @ file:///home/conda/feedstock_root/build_artifacts/cryptography_1604179078642/work
+cycler==0.10.0
+cymem==2.0.5
+Cython==0.29.21
+dataclasses @ file:///home/conda/feedstock_root/build_artifacts/dataclasses_1602075176424/work
+decorator==4.4.2
+dgl-cu101==0.5.3
+dill==0.3.1.1
+easydict==1.9
+en-core-web-sm @ file:///home/cike/project/kingdom/temp/en_core_web_sm-2.2.0.tar.gz
+-e git+https://github.com/pytorch/fairseq@40f6c758b361adc7b87fa553f6f439daa4ee9501#egg=fairseq
+filelock @ file:///home/conda/feedstock_root/build_artifacts/filelock_1589994591731/work
+gensim==3.8.1
+googledrivedownloader==0.4
+graphviz==0.14.2
+h5py==2.10.0
+html5lib==0.9999999
+hydra-core==1.0.6
+idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1593328102638/work
+immutables==0.15
+importlib-metadata @ file:///home/conda/feedstock_root/build_artifacts/importlib-metadata_1602263269022/work
+importlib-resources==5.1.2
+isodate==0.6.0
+jieba==0.39
+Jinja2==2.11.3
+joblib @ file:///home/conda/feedstock_root/build_artifacts/joblib_1601671685479/work
+kiwisolver==1.2.0
+lark-parser==0.11.1
+llvmlite==0.36.0
+Markdown @ file:///home/conda/feedstock_root/build_artifacts/markdown_1603668500820/work
+MarkupSafe==1.1.1
+matplotlib==3.3.2
+mkl-fft==1.2.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+murmurhash==1.0.5
+networkx==2.5
+ninja==1.10.0.post2
+nltk==3.4.4
+numba==0.53.1
+numpy==1.19.5
+olefile==0.46
+omegaconf==2.0.6
+opencv-contrib-python==3.3.0.9
+opencv-python==4.4.0.44
+packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1589925210001/work
+pandas==0.22.0
+path==15.0.1
+path.py==12.5.0
+pathy==0.4.0
+Pillow @ file:///tmp/build/80754af9/pillow_1594307298074/work
+plac==1.1.3
+portalocker==2.0.0
+preshed==3.0.5
+protobuf==3.13.0
+psutil==5.8.0
+pycocotools==2.0.2
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+pydantic==1.7.3
+pyOpenSSL==19.1.0
+pyparsing==2.4.7
+pyrouge==0.1.3
+pyrsistent==0.17.3
+PySocks @ file:///home/conda/feedstock_root/build_artifacts/pysocks_1602326920180/work
+python-dateutil==2.8.1
+python-louvain==0.15
+pytz==2020.4
+PyYAML==5.3.1
+rdflib==5.0.0
+regex==2016.6.24
+requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1605186911681/work
+rouge==1.0.0
+sacrebleu==1.5.1
+sacremoses @ file:///home/conda/feedstock_root/build_artifacts/sacremoses_1588857588528/work
+scikit-learn==0.23.2
+scipy==1.3.1
+sentencepiece==0.1.92
+six==1.15.0
+sklearn==0.0
+smart-open==3.0.0
+spacy==2.3.4
+spacy-legacy==3.0.1
+srsly==1.0.5
+stanfordcorenlp==3.9.1.1
+stanfordnlp==0.2.0
+stanza==1.2
+tensorboardX @ file:///home/conda/feedstock_root/build_artifacts/tensorboardx_1594067496847/work
+tensorflow==1.2.1
+thinc==7.4.5
+threadpoolctl==2.1.0
+tokenizers @ file:///home/conda/feedstock_root/build_artifacts/tokenizers_1595284192330/work
+torch==1.7.1
+torch-cluster @ file:///home/cike/project/kingdom/temp/torch_cluster-1.5.8-cp36-cp36m-linux_x86_64.whl
+torch-geometric==1.6.3
+torch-scatter @ file:///home/cike/project/kingdom/temp/torch_scatter-2.0.5-cp36-cp36m-linux_x86_64.whl
+torch-sparse @ file:///home/cike/project/kingdom/temp/torch_sparse-0.6.8-cp36-cp36m-linux_x86_64.whl
+torchaudio==0.7.0a0+a853dff
+torchvision==0.8.2
+tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1603658198734/work
+transformers @ file:///home/conda/feedstock_root/build_artifacts/transformers_1601411476842/work
+typer==0.3.2
+typing-extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1602702424206/work
+uritools==3.0.0
+urlextract==1.2.0
+urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1603125704209/work
+wasabi==0.8.2
+webencodings==0.5.1
+Werkzeug==1.0.1
+yacs==0.1.8
+zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1603668650351/work

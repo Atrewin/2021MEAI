@@ -1,20 +1,9 @@
-import numpy as np
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.autograd import Function
-import os
-import matplotlib.pyplot as plt
-import torch.optim as optim
+
 import torchvision.transforms as transforms
 from torchvision.datasets import ImageFolder
-from torch.utils.data import DataLoader
-import torch
-import torch.utils.data as data
+
 import os
-import numpy as np
-import random
-import json
+
 from utils.path_util import from_project_root
 
 class DataConfig():#用于对齐两个领域的数据集label to index
@@ -42,7 +31,9 @@ class DataConfig():#用于对齐两个领域的数据集label to index
 
 source_transform = transforms.Compose([
     # 灰度值
-    transforms.Grayscale(),
+    # transforms.Grayscale(),
+    # # source data是64x46，将target data的28x28放大成64x64。
+    transforms.Resize((64, 64)),
     # 水平反转 (Augmentation)
     transforms.RandomHorizontalFlip(),
     # 旋转15度內 (Augmentation)
@@ -53,13 +44,13 @@ source_transform = transforms.Compose([
 
 target_transform = transforms.Compose([
     # 灰度值。
-    transforms.Grayscale(),
-    # source data是64x46，将target data的28x28放大成64x64。
+    # transforms.Grayscale(),
+    # # source data是64x46，将target data的28x28放大成64x64。
     transforms.Resize((64, 64)),
-    # 水平反转 (Augmentation)
-    transforms.RandomHorizontalFlip(),
-    # 旋转15度內 (Augmentation)
-    transforms.RandomRotation(15),
+    # # 水平反转 (Augmentation)
+    # transforms.RandomHorizontalFlip(),
+    # # 旋转15度內 (Augmentation)
+    # transforms.RandomRotation(15),
     # to Tensor
     transforms.ToTensor(),
 ])
@@ -93,15 +84,19 @@ print(" ")
 #         return self.images_dataset
 
 
-def get_deep_dataset(root):
+def get_deep_dataset(root, mode = "train"):
     root = from_project_root(root)
 
     if not os.path.exists(root):
         print("[ERROR] Data file does not exist!")
         assert (0)
     # 声明该数据集 index2lable的config
+
     dataConfig = DataConfig()
-    images_dataset = ImageFolder(root, transform=source_transform, target_transform =dataConfig.label_transform)
+    if(mode=="train"):
+        images_dataset = ImageFolder(root, transform=source_transform)#, target_transform =dataConfig.label_transform
+    else:
+        images_dataset = ImageFolder(root, transform=target_transform, target_transform=dataConfig.label_transform)
     #修改dataConfig的in_classer2str
     dataConfig.set_data_config_classes(images_dataset.classes)
     return images_dataset

@@ -1,14 +1,11 @@
-
+from torch.utils.data import DataLoader
+import torch
+import torch.utils.data as data
 import json
 from torch import optim
 import argparse, datetime, torch
 import traceback
 from utils.logger import *
-
-import sys
-import os
-from os.path import normpath,join,dirname
-import numpy as np
 
 from data.data_loder import *
 from models.BaseModels import *
@@ -19,8 +16,8 @@ def main():
 
     # data url parameters
 
-    parser.add_argument('--source', default='dvd_reviews', help='source file')
-    parser.add_argument('--target', default='book_reviews', help='target file')
+    parser.add_argument('--source', default='data/datasets/train_val/train', help='source file')
+    parser.add_argument('--target', default='data/datasets/NEU-CLS', help='target file')
     # 几点
     # model training parameters
     parser.add_argument('--trainN', default=2, type=int, help='N in train')  # 固定trainN=2
@@ -44,7 +41,7 @@ def main():
     parser.add_argument('--load_ckpt', default=None, help='load ckpt')
     parser.add_argument('--save_ckpt', default=None, help='save ckpt')
     parser.add_argument('--fp16', action='store_true', help='use nvidia apex fp16')
-    parser.add_argument('--only_test', action='store_true', help='only test')
+    parser.add_argument('--only_test_target', action='store_true', help='only test')
     parser.add_argument('--ckpt_name', type=str, default='', help='checkpoint name.')
 
     # only for bert / roberta
@@ -78,30 +75,14 @@ def main():
     parser.add_argument("--notes", type=str, default='', help='Root directory for all logging.')
 
     opt = parser.parse_args()
-    trainN = opt.trainN
-    N = opt.N
-    K = opt.K
-    Q = opt.Q
-    batch_size = opt.batch_size
-    model_name = "GCAModel"
-    encoder_name = opt.encoder
-    max_length = opt.max_length
 
     # train_log setting
     LOG_PATH = opt.log_root
     if not os.path.exists(LOG_PATH):
         os.makedirs(LOG_PATH)
-    prefix = '-'.join([model_name, encoder_name, opt.source, opt.target])
+    prefix = ""
 
 
-    if opt.na_rate != 0:
-        prefix += '-na{}'.format(opt.na_rate)
-    if opt.dot:
-        prefix += '-dot'
-    if opt.cat_entity_rep:
-        prefix += '-catentity'
-    if len(opt.ckpt_name) > 0:
-        prefix += '-' + opt.ckpt_name
 
     nowTime = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
     log_path = os.path.join(LOG_PATH, prefix + "-" + opt.notes + "-" + nowTime + ".txt")
@@ -110,21 +91,8 @@ def main():
     logger.addHandler(file_handler)
 
     logger.info("log id: {}".format(nowTime))
-    logger.info("{}-way-{}-shot Few-Shot Relation Classification".format(N, K))
-    logger.info("model: {}".format(model_name))
-    logger.info("encoder: {}".format(encoder_name))
-    logger.info("max_length: {}".format(max_length))
-    logger.info("#" * 30)
-    logger.info("roberta: {}".format(opt.pretrain_ckpt))
-    logger.info("Q: {}".format(opt.Q))
     logger.info("source domain: {}".format(opt.source))
     logger.info("target domain: {}".format(opt.target))
-
-
-    logger.info("start_train_prototypical: {}".format(opt.start_train_prototypical))
-    logger.info("start_train_adv: {}".format(opt.start_train_adv))
-    logger.info("start_train_dis: {}".format(opt.start_train_dis))
-
     logger.info("#" * 30)
 
     #  构造模型   @jinhui 将整个模型框架传入的设计会更加优雅
@@ -133,18 +101,22 @@ def main():
 
     ####TODO dataset
     # 这里貌似有异步调用的问题
-    source_dataset = get_deep_dataset('data/datasets/train_val/train')
-    trarget_dataset = get_deep_dataset('data/datasets/NEU-CLS')
+    source_dataset = get_deep_dataset(opt.source)
+
+    trarget_dataset = get_deep_dataset(opt.target)
     source_dataloader = DataLoader(source_dataset, batch_size=opt.batch_size, shuffle=True)
     target_dataloader = DataLoader(trarget_dataset, batch_size=opt.batch_size, shuffle=True)
 
     # 获取训练集信息
-    source_classes = 9
-    target_classes = 6
+    source_classes = len(source_dataset.classes)
+    target_classes = len(trarget_dataset.classes)
+
+    class_nums = max(source_classes, target_classes)
     # 准备模型
     feature_extractor = FeatureExtractor().cuda()
-    label_predictor = LabelPredictor(source_classes).cuda()
+    label_predictor = LabelPredictor(class_nums).cuda()
     domain_classifier = DomainClassifier().cuda()
+
 
     # 封装models
     model = DAModel(feature_extractor, label_predictor, domain_classifier)
@@ -160,45 +132,21 @@ def main():
 
 
     # 将训练对象封装如farmework
-    farmework = AdeversarialTrainingFramework(model, target_dataloader, target_dataloader, class_criterion, domain_criterion, optimizer, opt)
-
-    farmework.train()
-    print("pause")
-
-
-
-
-
-
-def getSentenceEncoder(encoder_name, opt):
-
-    if encoder_name == 'cnn':
-        try:
-            # pre-train embedding
-            glove_mat = np.load('./pretrain/glove/glove_mat.npy')
-            glove_word2id = json.load(open('./pretrain/glove/glove_word2id.json'))
-        except:
-            raise Exception("Cannot find glove files. Run glove/download_glove.sh to download glove files.")
-        max_length = opt.max_length
-        sentence_encoder = CNNSentenceEncoder(glove_mat, glove_word2id, max_length, hidden_size=opt.hidden_size)
-    elif encoder_name == 'bert':
-        pretrain_ckpt = opt.pretrain_ckpt or 'bert-base-uncased'
-        max_length = opt.max_length
-        sentence_encoder = BERTSentenceEncoder(pretrain_ckpt, max_length, cat_entity_rep=opt.cat_entity_rep, mask_entity=opt.mask_entity)
-    elif encoder_name == 'roberta':
-        pretrain_ckpt = opt.pretrain_ckpt
-        max_length = opt.max_length
-        filepath, tempfilename = os.path.split(pretrain_ckpt)
-        sentence_encoder =RobertaSentenceEncoder(filepath,tempfilename, max_length, cat_entity_rep=opt.cat_entity_rep)
-    elif encoder_name == "graph":
-        max_length = opt.max_length
-        sentence_encoder = GraphSentenceEncoder(max_length, cat_entity_rep=opt.cat_entity_rep,
-                                                    mask_entity=opt.mask_entity)
-
+    farmework = AdeversarialTrainingFramework(model, source_dataloader, target_dataloader,
+                                              class_criterion, domain_criterion, optimizer,
+                                              source_classes, target_classes, opt)
+    if(not opt.only_test_target):
+        farmework.train()
+        acc = farmework.target_inference(model)
+        print(acc)
     else:
-        raise NotImplementedError
+        acc = farmework.target_inference(model, opt.load_ckpt)
+        logger.info("result on " + opt.target + " is {:6.4f}".format(acc))
+        # print(acc)
 
-    return sentence_encoder
+
+
+
 
 
 
