@@ -27,7 +27,7 @@
 
 ## Testing
 >> python main.py --source source_data_root --target_data_ root --batch_size 16 --only_test_target --load_ckpt ckpt_path
->>> 如：python main.py --source data/datasets/train_val/train --target data/datasets/NEU-CLS --batch_size 16 --only_test_target --load_ckpt output/model.bin 
-CUDA_VISIBLE_DEVICES=1 python main.py --source data/datasets/train_val/train --target data/datasets/NEU-CLS --batch_size 16 --only_test_target --load_ckpt output/9-6-model.bin
+>>> 如：python main.py --source data/datasets/train_val/train --target data/datasets/NEU-CLS --batch_size 16 --only_test_target --load_ckpt output/9-6-model.bin 
+
 
 >> 注意path_root可以为绝对路径也可也是相对于项目根目录的相对路径

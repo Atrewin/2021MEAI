@@ -1,0 +1,153 @@
+2021-07-05 15:56:48,815 INFO    : log id: 20210705_155648
+2021-07-05 15:56:48,815 INFO    : 2-way-1-shot Few-Shot Relation Classification
+2021-07-05 15:56:48,815 INFO    : model: DAModel
+2021-07-05 15:56:48,815 INFO    : encoder: bert
+2021-07-05 15:56:48,815 INFO    : max_length: 200
+2021-07-05 15:56:48,815 INFO    : ##############################
+2021-07-05 15:56:48,815 INFO    : roberta: None
+2021-07-05 15:56:48,815 INFO    : Q: 1
+2021-07-05 15:56:48,815 INFO    : source domain: data/datasets/train_val
+2021-07-05 15:56:48,815 INFO    : target domain: data/datasets/NEU-CLS
+2021-07-05 15:56:48,815 INFO    : start_train_prototypical: -1
+2021-07-05 15:56:48,816 INFO    : start_train_adv: 500000
+2021-07-05 15:56:48,816 INFO    : start_train_dis: -1
+2021-07-05 15:56:48,816 INFO    : ##############################
+2021-07-05 15:56:58,551 INFO    : epoch   0: train D loss: 0.7220, train F loss: 2.2179, source_acc 0.1433, target_acc 15.6111
+2021-07-05 15:57:05,501 INFO    : epoch   1: train D loss: 0.7039, train F loss: 2.2028, source_acc 0.1488, target_acc 18.6111
+2021-07-05 15:57:12,406 INFO    : epoch   2: train D loss: 0.7025, train F loss: 2.2169, source_acc 0.1482, target_acc 18.7778
+2021-07-05 15:57:19,302 INFO    : epoch   3: train D loss: 0.6998, train F loss: 2.2315, source_acc 0.1322, target_acc 16.5556
+2021-07-05 15:57:26,212 INFO    : epoch   4: train D loss: 0.7020, train F loss: 2.2871, source_acc 0.0929, target_acc 15.3333
+2021-07-05 15:57:33,203 INFO    : epoch   5: train D loss: 0.6979, train F loss: 2.2654, source_acc 0.0962, target_acc 16.0000
+2021-07-05 15:57:40,120 INFO    : epoch   6: train D loss: 0.6972, train F loss: 2.2343, source_acc 0.1195, target_acc 13.5000
+2021-07-05 15:57:47,020 INFO    : epoch   7: train D loss: 0.6958, train F loss: 2.2611, source_acc 0.0935, target_acc 15.4444
+2021-07-05 15:57:53,949 INFO    : epoch   8: train D loss: 0.6956, train F loss: 2.2661, source_acc 0.0968, target_acc 14.3333
+2021-07-05 15:58:00,974 INFO    : epoch   9: train D loss: 0.6957, train F loss: 2.2312, source_acc 0.1311, target_acc 14.1111
+2021-07-05 15:58:07,950 INFO    : epoch  10: train D loss: 0.6971, train F loss: 2.2287, source_acc 0.1322, target_acc 19.1111
+2021-07-05 15:58:14,912 INFO    : epoch  11: train D loss: 0.6999, train F loss: 2.2085, source_acc 0.1355, target_acc 15.5000
+2021-07-05 15:58:21,829 INFO    : epoch  12: train D loss: 0.6972, train F loss: 2.2480, source_acc 0.1062, target_acc 16.5000
+2021-07-05 15:58:28,787 INFO    : epoch  13: train D loss: 0.6972, train F loss: 2.2395, source_acc 0.1123, target_acc 15.1667
+2021-07-05 15:58:35,718 INFO    : epoch  14: train D loss: 0.6982, train F loss: 2.2360, source_acc 0.1217, target_acc 15.1667
+2021-07-05 15:58:42,627 INFO    : epoch  15: train D loss: 0.6975, train F loss: 2.2637, source_acc 0.1101, target_acc 17.0556
+2021-07-05 15:58:49,527 INFO    : epoch  16: train D loss: 0.6951, train F loss: 2.2834, source_acc 0.0957, target_acc 14.8333
+2021-07-05 15:58:56,457 INFO    : epoch  17: train D loss: 0.6959, train F loss: 2.2867, source_acc 0.1034, target_acc 12.2778
+2021-07-05 15:59:03,360 INFO    : epoch  18: train D loss: 0.6982, train F loss: 2.3043, source_acc 0.0968, target_acc 16.0000
+2021-07-05 15:59:10,242 INFO    : epoch  19: train D loss: 0.6953, train F loss: 2.3130, source_acc 0.0863, target_acc 16.6667
+2021-07-05 15:59:17,177 INFO    : epoch  20: train D loss: 0.6970, train F loss: 2.2834, source_acc 0.1062, target_acc 17.8333
+2021-07-05 15:59:24,140 INFO    : epoch  21: train D loss: 0.6950, train F loss: 2.2347, source_acc 0.1388, target_acc 13.0556
+2021-07-05 15:59:31,002 INFO    : epoch  22: train D loss: 0.6954, train F loss: 2.2534, source_acc 0.1200, target_acc 14.3333
+2021-07-05 15:59:37,931 INFO    : epoch  23: train D loss: 0.6954, train F loss: 2.2392, source_acc 0.1283, target_acc 14.3333
+2021-07-05 15:59:45,081 INFO    : epoch  24: train D loss: 0.6951, train F loss: 2.2190, source_acc 0.1233, target_acc 15.9444
+2021-07-05 15:59:52,003 INFO    : epoch  25: train D loss: 0.6949, train F loss: 2.2105, source_acc 0.1162, target_acc 14.4444
+2021-07-05 15:59:58,993 INFO    : epoch  26: train D loss: 0.6944, train F loss: 2.2175, source_acc 0.1139, target_acc 14.8333
+2021-07-05 16:00:06,088 INFO    : epoch  27: train D loss: 0.6942, train F loss: 2.2232, source_acc 0.1261, target_acc 16.5000
+2021-07-05 16:00:13,078 INFO    : epoch  28: train D loss: 0.6945, train F loss: 2.2515, source_acc 0.1029, target_acc 15.3889
+2021-07-05 16:00:20,091 INFO    : epoch  29: train D loss: 0.6950, train F loss: 2.2410, source_acc 0.1090, target_acc 13.5556
+2021-07-05 16:00:26,979 INFO    : epoch  30: train D loss: 0.6946, train F loss: 2.2629, source_acc 0.1139, target_acc 13.8333
+2021-07-05 16:00:33,841 INFO    : epoch  31: train D loss: 0.6944, train F loss: 2.2599, source_acc 0.1023, target_acc 15.5556
+2021-07-05 16:00:40,779 INFO    : epoch  32: train D loss: 0.6955, train F loss: 2.2590, source_acc 0.1112, target_acc 16.0000
+2021-07-05 16:00:47,794 INFO    : epoch  33: train D loss: 0.6936, train F loss: 2.2702, source_acc 0.1101, target_acc 17.0000
+2021-07-05 16:00:54,661 INFO    : epoch  34: train D loss: 0.6939, train F loss: 2.2766, source_acc 0.0935, target_acc 17.2222
+2021-07-05 16:01:01,545 INFO    : epoch  35: train D loss: 0.6949, train F loss: 2.2687, source_acc 0.1056, target_acc 13.8333
+2021-07-05 16:01:08,459 INFO    : epoch  36: train D loss: 0.6947, train F loss: 2.2465, source_acc 0.1167, target_acc 14.9444
+2021-07-05 16:01:15,446 INFO    : epoch  37: train D loss: 0.6942, train F loss: 2.2314, source_acc 0.1294, target_acc 15.1111
+2021-07-05 16:01:22,340 INFO    : epoch  38: train D loss: 0.6939, train F loss: 2.2442, source_acc 0.1206, target_acc 17.8333
+2021-07-05 16:01:29,783 INFO    : epoch  39: train D loss: 0.6936, train F loss: 2.2344, source_acc 0.1211, target_acc 17.1667
+2021-07-05 16:01:36,714 INFO    : epoch  40: train D loss: 0.6947, train F loss: 2.2515, source_acc 0.1173, target_acc 16.3889
+2021-07-05 16:01:43,628 INFO    : epoch  41: train D loss: 0.6944, train F loss: 2.2535, source_acc 0.1145, target_acc 16.6667
+2021-07-05 16:01:50,548 INFO    : epoch  42: train D loss: 0.6945, train F loss: 2.2589, source_acc 0.1162, target_acc 14.1667
+2021-07-05 16:01:57,440 INFO    : epoch  43: train D loss: 0.6945, train F loss: 2.2798, source_acc 0.0951, target_acc 14.0000
+2021-07-05 16:02:04,356 INFO    : epoch  44: train D loss: 0.6946, train F loss: 2.2592, source_acc 0.1001, target_acc 14.8889
+2021-07-05 16:02:11,276 INFO    : epoch  45: train D loss: 0.6945, train F loss: 2.2512, source_acc 0.1112, target_acc 14.5556
+2021-07-05 16:02:18,185 INFO    : epoch  46: train D loss: 0.6940, train F loss: 2.2474, source_acc 0.1128, target_acc 14.4444
+2021-07-05 16:02:25,475 INFO    : epoch  47: train D loss: 0.6952, train F loss: 2.2457, source_acc 0.1156, target_acc 14.2778
+2021-07-05 16:02:32,443 INFO    : epoch  48: train D loss: 0.6937, train F loss: 2.2336, source_acc 0.1278, target_acc 14.8889
+2021-07-05 16:02:39,329 INFO    : epoch  49: train D loss: 0.6939, train F loss: 2.2511, source_acc 0.1117, target_acc 15.0556
+2021-07-05 16:02:46,245 INFO    : epoch  50: train D loss: 0.6939, train F loss: 2.2748, source_acc 0.1139, target_acc 15.8333
+2021-07-05 16:02:53,136 INFO    : epoch  51: train D loss: 0.6935, train F loss: 2.2705, source_acc 0.1023, target_acc 13.6667
+2021-07-05 16:03:00,121 INFO    : epoch  52: train D loss: 0.6938, train F loss: 2.2523, source_acc 0.1040, target_acc 15.5000
+2021-07-05 16:03:07,046 INFO    : epoch  53: train D loss: 0.6941, train F loss: 2.2483, source_acc 0.1112, target_acc 14.1111
+2021-07-05 16:03:13,981 INFO    : epoch  54: train D loss: 0.6935, train F loss: 2.2496, source_acc 0.1128, target_acc 15.2222
+2021-07-05 16:03:20,940 INFO    : epoch  55: train D loss: 0.6941, train F loss: 2.2480, source_acc 0.1211, target_acc 15.2778
+2021-07-05 16:03:27,925 INFO    : epoch  56: train D loss: 0.6937, train F loss: 2.2532, source_acc 0.1040, target_acc 15.3333
+2021-07-05 16:03:34,910 INFO    : epoch  57: train D loss: 0.6937, train F loss: 2.2373, source_acc 0.1162, target_acc 15.6667
+2021-07-05 16:03:41,865 INFO    : epoch  58: train D loss: 0.6937, train F loss: 2.2379, source_acc 0.1007, target_acc 17.3889
+2021-07-05 16:03:48,781 INFO    : epoch  59: train D loss: 0.6936, train F loss: 2.2409, source_acc 0.1394, target_acc 15.8333
+2021-07-05 16:03:55,677 INFO    : epoch  60: train D loss: 0.6936, train F loss: 2.2392, source_acc 0.1305, target_acc 16.1111
+2021-07-05 16:04:02,581 INFO    : epoch  61: train D loss: 0.6935, train F loss: 2.2488, source_acc 0.1233, target_acc 15.5000
+2021-07-05 16:04:09,524 INFO    : epoch  62: train D loss: 0.6935, train F loss: 2.2287, source_acc 0.1289, target_acc 15.5556
+2021-07-05 16:04:16,452 INFO    : epoch  63: train D loss: 0.6935, train F loss: 2.2339, source_acc 0.1466, target_acc 15.5556
+2021-07-05 16:04:23,345 INFO    : epoch  64: train D loss: 0.6936, train F loss: 2.2652, source_acc 0.1217, target_acc 14.9444
+2021-07-05 16:04:30,267 INFO    : epoch  65: train D loss: 0.6931, train F loss: 2.2520, source_acc 0.1067, target_acc 14.9444
+2021-07-05 16:04:37,180 INFO    : epoch  66: train D loss: 0.6936, train F loss: 2.2434, source_acc 0.1444, target_acc 16.6111
+2021-07-05 16:04:44,236 INFO    : epoch  67: train D loss: 0.6937, train F loss: 2.2528, source_acc 0.1416, target_acc 17.3333
+2021-07-05 16:04:51,174 INFO    : epoch  68: train D loss: 0.6933, train F loss: 2.2363, source_acc 0.1471, target_acc 16.7222
+2021-07-05 16:04:58,091 INFO    : epoch  69: train D loss: 0.6936, train F loss: 2.2537, source_acc 0.1283, target_acc 17.3333
+2021-07-05 16:05:05,053 INFO    : epoch  70: train D loss: 0.6932, train F loss: 2.2836, source_acc 0.1051, target_acc 17.9444
+2021-07-05 16:05:12,001 INFO    : epoch  71: train D loss: 0.6935, train F loss: 2.2910, source_acc 0.1112, target_acc 16.2778
+2021-07-05 16:05:18,949 INFO    : epoch  72: train D loss: 0.6935, train F loss: 2.2731, source_acc 0.1173, target_acc 18.0556
+2021-07-05 16:05:25,877 INFO    : epoch  73: train D loss: 0.6931, train F loss: 2.2747, source_acc 0.1084, target_acc 16.9444
+2021-07-05 16:05:33,015 INFO    : epoch  74: train D loss: 0.6933, train F loss: 2.2673, source_acc 0.1139, target_acc 19.6667
+2021-07-05 16:05:39,937 INFO    : epoch  75: train D loss: 0.6933, train F loss: 2.2630, source_acc 0.1178, target_acc 16.0556
+2021-07-05 16:05:46,846 INFO    : epoch  76: train D loss: 0.6935, train F loss: 2.3075, source_acc 0.1128, target_acc 16.7222
+2021-07-05 16:05:53,910 INFO    : epoch  77: train D loss: 0.6939, train F loss: 2.2929, source_acc 0.1051, target_acc 17.0000
+2021-07-05 16:06:01,013 INFO    : epoch  78: train D loss: 0.6932, train F loss: 2.2517, source_acc 0.1156, target_acc 16.7778
+2021-07-05 16:06:07,958 INFO    : epoch  79: train D loss: 0.6931, train F loss: 2.2707, source_acc 0.1233, target_acc 15.5000
+2021-07-05 16:06:14,842 INFO    : epoch  80: train D loss: 0.6936, train F loss: 2.2722, source_acc 0.0979, target_acc 15.1111
+2021-07-05 16:06:21,779 INFO    : epoch  81: train D loss: 0.6933, train F loss: 2.2299, source_acc 0.1350, target_acc 16.0000
+2021-07-05 16:06:28,737 INFO    : epoch  82: train D loss: 0.6934, train F loss: 2.2617, source_acc 0.1007, target_acc 15.8333
+2021-07-05 16:06:35,732 INFO    : epoch  83: train D loss: 0.6932, train F loss: 2.2977, source_acc 0.1189, target_acc 15.3889
+2021-07-05 16:06:42,637 INFO    : epoch  84: train D loss: 0.6934, train F loss: 2.3703, source_acc 0.0896, target_acc 16.0556
+2021-07-05 16:06:49,624 INFO    : epoch  85: train D loss: 0.6934, train F loss: 2.3068, source_acc 0.0968, target_acc 17.5000
+2021-07-05 16:06:56,558 INFO    : epoch  86: train D loss: 0.6932, train F loss: 2.2623, source_acc 0.1427, target_acc 13.7778
+2021-07-05 16:07:03,577 INFO    : epoch  87: train D loss: 0.6943, train F loss: 2.2541, source_acc 0.1316, target_acc 16.1667
+2021-07-05 16:07:10,504 INFO    : epoch  88: train D loss: 0.6955, train F loss: 2.2452, source_acc 0.1162, target_acc 14.9444
+2021-07-05 16:07:17,411 INFO    : epoch  89: train D loss: 0.6936, train F loss: 2.2827, source_acc 0.0796, target_acc 13.3889
+2021-07-05 16:07:24,344 INFO    : epoch  90: train D loss: 0.6936, train F loss: 2.3149, source_acc 0.0879, target_acc 13.2778
+2021-07-05 16:07:31,256 INFO    : epoch  91: train D loss: 0.6931, train F loss: 2.3076, source_acc 0.0736, target_acc 14.3889
+2021-07-05 16:07:38,190 INFO    : epoch  92: train D loss: 0.6933, train F loss: 2.2667, source_acc 0.1012, target_acc 16.2222
+2021-07-05 16:07:45,089 INFO    : epoch  93: train D loss: 0.6932, train F loss: 2.2802, source_acc 0.0852, target_acc 16.2778
+2021-07-05 16:07:52,100 INFO    : epoch  94: train D loss: 0.6948, train F loss: 2.2923, source_acc 0.0929, target_acc 18.7778
+2021-07-05 16:07:59,027 INFO    : epoch  95: train D loss: 0.6932, train F loss: 2.2452, source_acc 0.1134, target_acc 13.8333
+2021-07-05 16:08:05,974 INFO    : epoch  96: train D loss: 0.6933, train F loss: 2.2362, source_acc 0.1167, target_acc 13.8333
+2021-07-05 16:08:12,893 INFO    : epoch  97: train D loss: 0.6937, train F loss: 2.2719, source_acc 0.0902, target_acc 14.1111
+2021-07-05 16:08:20,145 INFO    : epoch  98: train D loss: 0.6929, train F loss: 2.2580, source_acc 0.1012, target_acc 14.8333
+2021-07-05 16:08:27,070 INFO    : epoch  99: train D loss: 0.6927, train F loss: 2.2453, source_acc 0.0841, target_acc 16.7222
+2021-07-05 16:08:34,138 INFO    : epoch 100: train D loss: 0.6932, train F loss: 2.2254, source_acc 0.0913, target_acc 15.9444
+2021-07-05 16:08:41,057 INFO    : epoch 101: train D loss: 0.6929, train F loss: 2.2422, source_acc 0.0868, target_acc 16.2222
+2021-07-05 16:08:48,019 INFO    : epoch 102: train D loss: 0.6924, train F loss: 2.2285, source_acc 0.0979, target_acc 16.1667
+2021-07-05 16:08:54,969 INFO    : epoch 103: train D loss: 0.6939, train F loss: 2.2462, source_acc 0.0841, target_acc 15.5556
+2021-07-05 16:09:01,932 INFO    : epoch 104: train D loss: 0.6934, train F loss: 2.2429, source_acc 0.0774, target_acc 12.5556
+2021-07-05 16:09:08,928 INFO    : epoch 105: train D loss: 0.6936, train F loss: 2.2375, source_acc 0.1007, target_acc 12.7222
+2021-07-05 16:09:15,862 INFO    : epoch 106: train D loss: 0.6935, train F loss: 2.2815, source_acc 0.0874, target_acc 14.2222
+2021-07-05 16:09:22,790 INFO    : epoch 107: train D loss: 0.6936, train F loss: 2.2832, source_acc 0.0752, target_acc 13.6667
+2021-07-05 16:09:29,697 INFO    : epoch 108: train D loss: 0.6936, train F loss: 2.3012, source_acc 0.0741, target_acc 15.1111
+2021-07-05 16:09:36,629 INFO    : epoch 109: train D loss: 0.6932, train F loss: 2.3083, source_acc 0.0763, target_acc 15.1111
+2021-07-05 16:09:43,671 INFO    : epoch 110: train D loss: 0.6938, train F loss: 2.2978, source_acc 0.0774, target_acc 14.0556
+2021-07-05 16:09:50,670 INFO    : epoch 111: train D loss: 0.6937, train F loss: 2.2861, source_acc 0.0763, target_acc 14.6667
+2021-07-05 16:09:57,628 INFO    : epoch 112: train D loss: 0.6935, train F loss: 2.2775, source_acc 0.0890, target_acc 14.7778
+2021-07-05 16:10:04,625 INFO    : epoch 113: train D loss: 0.6934, train F loss: 2.2910, source_acc 0.0763, target_acc 15.3889
+2021-07-05 16:10:11,699 INFO    : epoch 114: train D loss: 0.6934, train F loss: 2.2772, source_acc 0.0780, target_acc 15.1667
+2021-07-05 16:10:18,673 INFO    : epoch 115: train D loss: 0.6933, train F loss: 2.2725, source_acc 0.0841, target_acc 15.9444
+2021-07-05 16:10:26,053 INFO    : epoch 116: train D loss: 0.6935, train F loss: 2.2667, source_acc 0.0747, target_acc 15.2222
+2021-07-05 16:10:32,969 INFO    : epoch 117: train D loss: 0.6932, train F loss: 2.2780, source_acc 0.0691, target_acc 13.9444
+2021-07-05 16:10:40,042 INFO    : epoch 118: train D loss: 0.6932, train F loss: 2.2964, source_acc 0.0708, target_acc 13.0000
+2021-07-05 16:10:46,954 INFO    : epoch 119: train D loss: 0.6923, train F loss: 2.2834, source_acc 0.0819, target_acc 13.7222
+2021-07-05 16:10:53,868 INFO    : epoch 120: train D loss: 0.6936, train F loss: 2.2778, source_acc 0.1034, target_acc 17.0556
+2021-07-05 16:11:00,849 INFO    : epoch 121: train D loss: 0.6935, train F loss: 2.2999, source_acc 0.0874, target_acc 16.5000
+2021-07-05 16:11:07,768 INFO    : epoch 122: train D loss: 0.6934, train F loss: 2.2905, source_acc 0.0879, target_acc 14.6111
+2021-07-05 16:11:14,696 INFO    : epoch 123: train D loss: 0.6933, train F loss: 2.2785, source_acc 0.0929, target_acc 15.3333
+2021-07-05 16:11:21,578 INFO    : epoch 124: train D loss: 0.6933, train F loss: 2.2972, source_acc 0.0835, target_acc 15.6111
+2021-07-05 16:11:28,502 INFO    : epoch 125: train D loss: 0.6932, train F loss: 2.3046, source_acc 0.0863, target_acc 14.7778
+2021-07-05 16:11:35,385 INFO    : epoch 126: train D loss: 0.6933, train F loss: 2.3025, source_acc 0.0857, target_acc 16.6667
+2021-07-05 16:11:42,271 INFO    : epoch 127: train D loss: 0.6931, train F loss: 2.3145, source_acc 0.0846, target_acc 16.5000
+2021-07-05 16:11:49,943 INFO    : epoch 128: train D loss: 0.6933, train F loss: 2.3088, source_acc 0.0985, target_acc 16.3889
+2021-07-05 16:11:56,943 INFO    : epoch 129: train D loss: 0.6933, train F loss: 2.2929, source_acc 0.0979, target_acc 15.7222
+2021-07-05 16:12:03,833 INFO    : epoch 130: train D loss: 0.6932, train F loss: 2.3000, source_acc 0.0852, target_acc 16.1111
+2021-07-05 16:12:10,740 INFO    : epoch 131: train D loss: 0.6932, train F loss: 2.3094, source_acc 0.0940, target_acc 18.6667
+2021-07-05 16:12:17,631 INFO    : epoch 132: train D loss: 0.6933, train F loss: 2.2999, source_acc 0.0857, target_acc 18.0556
+2021-07-05 16:12:24,562 INFO    : epoch 133: train D loss: 0.6932, train F loss: 2.2840, source_acc 0.0907, target_acc 18.8333
+2021-07-05 16:12:31,466 INFO    : epoch 134: train D loss: 0.6933, train F loss: 2.2924, source_acc 0.0929, target_acc 18.7778
+2021-07-05 16:12:38,342 INFO    : epoch 135: train D loss: 0.6933, train F loss: 2.2905, source_acc 0.0879, target_acc 19.7222
+2021-07-05 16:12:45,274 INFO    : epoch 136: train D loss: 0.6932, train F loss: 2.2844, source_acc 0.1394, target_acc 22.1667
+2021-07-05 16:12:52,165 INFO    : epoch 137: train D loss: 0.6931, train F loss: 2.2747, source_acc 0.1350, target_acc 19.8333
+2021-07-05 16:12:59,058 INFO    : epoch 138: train D loss: 0.6933, train F loss: 2.2739, source_acc 0.1189, target_acc 20.6667

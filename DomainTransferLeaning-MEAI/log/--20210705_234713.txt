@@ -1,0 +1,34 @@
+2021-07-05 23:47:13,183 INFO    : log id: 20210705_234713
+2021-07-05 23:47:13,183 INFO    : source domain: data/datasets/train_val/train
+2021-07-05 23:47:13,183 INFO    : target domain: data/datasets/NEU-CLS
+2021-07-05 23:47:13,183 INFO    : ##############################
+2021-07-05 23:47:23,364 INFO    : epoch   0: train D loss: 0.7259, train F loss: 2.2890, source_acc 0.0968, target_acc 16.1667
+2021-07-05 23:47:31,303 INFO    : epoch   1: train D loss: 0.7079, train F loss: 2.2842, source_acc 0.0835, target_acc 17.0000
+2021-07-05 23:47:38,513 INFO    : epoch   2: train D loss: 0.6992, train F loss: 2.2809, source_acc 0.0885, target_acc 13.4444
+2021-07-05 23:47:45,675 INFO    : epoch   3: train D loss: 0.6985, train F loss: 2.2744, source_acc 0.1001, target_acc 13.9444
+2021-07-05 23:47:52,552 INFO    : epoch   4: train D loss: 0.6988, train F loss: 2.2665, source_acc 0.0868, target_acc 15.6667
+2021-07-05 23:47:59,490 INFO    : epoch   5: train D loss: 0.6963, train F loss: 2.2769, source_acc 0.0924, target_acc 12.8333
+2021-07-05 23:48:06,367 INFO    : epoch   6: train D loss: 0.6957, train F loss: 2.2851, source_acc 0.0830, target_acc 15.7222
+2021-07-05 23:48:13,257 INFO    : epoch   7: train D loss: 0.6973, train F loss: 2.3102, source_acc 0.0747, target_acc 17.5556
+2021-07-05 23:48:20,131 INFO    : epoch   8: train D loss: 0.6965, train F loss: 2.3206, source_acc 0.0669, target_acc 15.0556
+2021-07-05 23:48:27,054 INFO    : epoch   9: train D loss: 0.6967, train F loss: 2.2958, source_acc 0.0658, target_acc 15.7222
+2021-07-05 23:48:33,961 INFO    : epoch  10: train D loss: 0.6957, train F loss: 2.2838, source_acc 0.0962, target_acc 18.8889
+2021-07-05 23:48:40,883 INFO    : epoch  11: train D loss: 0.6967, train F loss: 2.3201, source_acc 0.0785, target_acc 18.4444
+2021-07-05 23:48:47,822 INFO    : epoch  12: train D loss: 0.6986, train F loss: 2.3170, source_acc 0.0813, target_acc 16.8889
+2021-07-05 23:48:54,751 INFO    : epoch  13: train D loss: 0.6960, train F loss: 2.3412, source_acc 0.0863, target_acc 19.2222
+2021-07-05 23:49:01,693 INFO    : epoch  14: train D loss: 0.6981, train F loss: 2.2772, source_acc 0.1101, target_acc 20.2778
+2021-07-05 23:49:08,604 INFO    : epoch  15: train D loss: 0.6954, train F loss: 2.2287, source_acc 0.1648, target_acc 14.9444
+2021-07-05 23:49:15,510 INFO    : epoch  16: train D loss: 0.6968, train F loss: 2.2448, source_acc 0.1554, target_acc 18.8333
+2021-07-05 23:49:22,370 INFO    : epoch  17: train D loss: 0.6958, train F loss: 2.2659, source_acc 0.1112, target_acc 16.6111
+2021-07-05 23:49:29,237 INFO    : epoch  18: train D loss: 0.6949, train F loss: 2.2893, source_acc 0.0813, target_acc 17.1111
+2021-07-05 23:49:36,117 INFO    : epoch  19: train D loss: 0.6959, train F loss: 2.3181, source_acc 0.0686, target_acc 14.0000
+2021-07-05 23:49:42,954 INFO    : epoch  20: train D loss: 0.6948, train F loss: 2.3144, source_acc 0.0686, target_acc 14.0556
+2021-07-05 23:49:49,859 INFO    : epoch  21: train D loss: 0.6943, train F loss: 2.3089, source_acc 0.0819, target_acc 11.0556
+2021-07-05 23:49:56,762 INFO    : epoch  22: train D loss: 0.6947, train F loss: 2.3301, source_acc 0.0675, target_acc 14.2778
+2021-07-05 23:50:03,679 INFO    : epoch  23: train D loss: 0.6940, train F loss: 2.3173, source_acc 0.0769, target_acc 11.4444
+2021-07-05 23:50:10,651 INFO    : epoch  24: train D loss: 0.6942, train F loss: 2.3339, source_acc 0.0713, target_acc 18.3889
+2021-07-05 23:50:17,583 INFO    : epoch  25: train D loss: 0.6946, train F loss: 2.3360, source_acc 0.0808, target_acc 11.7778
+2021-07-05 23:50:25,205 INFO    : epoch  26: train D loss: 0.6950, train F loss: 2.3080, source_acc 0.0813, target_acc 14.7222
+2021-07-05 23:50:32,057 INFO    : epoch  27: train D loss: 0.6948, train F loss: 2.3100, source_acc 0.0736, target_acc 14.7778
+2021-07-05 23:50:39,014 INFO    : epoch  28: train D loss: 0.6946, train F loss: 2.3331, source_acc 0.0769, target_acc 13.9444
+2021-07-05 23:50:45,906 INFO    : epoch  29: train D loss: 0.6939, train F loss: 2.3432, source_acc 0.0675, target_acc 19.2222

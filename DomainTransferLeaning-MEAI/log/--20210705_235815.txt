@@ -1,0 +1,6 @@
+2021-07-05 23:58:15,493 INFO    : log id: 20210705_235815
+2021-07-05 23:58:15,494 INFO    : source domain: data/datasets/train_val/train
+2021-07-05 23:58:15,494 INFO    : target domain: data/datasets/NEU-CLS
+2021-07-05 23:58:15,494 INFO    : ##############################
+2021-07-05 23:59:48,296 INFO    : result on data/datasets/NEU-CLS 0
+2021-07-06 00:03:00,303 INFO    : result on  is 0.0000

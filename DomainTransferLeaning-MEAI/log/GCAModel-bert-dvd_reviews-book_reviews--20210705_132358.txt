@@ -1,0 +1,25 @@
+2021-07-05 13:23:58,732 INFO    : log id: 20210705_132358
+2021-07-05 13:23:58,733 INFO    : 2-way-1-shot Few-Shot Relation Classification
+2021-07-05 13:23:58,733 INFO    : model: GCAModel
+2021-07-05 13:23:58,733 INFO    : encoder: bert
+2021-07-05 13:23:58,733 INFO    : max_length: 200
+2021-07-05 13:23:58,733 INFO    : ##############################
+2021-07-05 13:23:58,733 INFO    : roberta: None
+2021-07-05 13:23:58,733 INFO    : Q: 1
+2021-07-05 13:23:58,733 INFO    : source domain: dvd_reviews
+2021-07-05 13:23:58,733 INFO    : target domain: book_reviews
+2021-07-05 13:23:58,733 INFO    : start_train_prototypical: -1
+2021-07-05 13:23:58,734 INFO    : start_train_adv: 500000
+2021-07-05 13:23:58,734 INFO    : start_train_dis: -1
+2021-07-05 13:23:58,734 INFO    : ##############################
+2021-07-05 13:24:05,879 INFO    : epoch   0: train D loss: 0.5376, train F loss: 2.1900, acc 0.1139
+2021-07-05 13:24:11,081 INFO    : epoch   1: train D loss: 0.3825, train F loss: 2.1948, acc 0.1062
+2021-07-05 13:24:16,425 INFO    : epoch   2: train D loss: 0.3410, train F loss: 2.1939, acc 0.1106
+2021-07-05 13:24:21,697 INFO    : epoch   3: train D loss: 0.2772, train F loss: 2.1933, acc 0.1067
+2021-07-05 13:24:27,041 INFO    : epoch   4: train D loss: 0.3132, train F loss: 2.1963, acc 0.1101
+2021-07-05 13:24:32,330 INFO    : epoch   5: train D loss: 0.2631, train F loss: 2.1980, acc 0.1001
+2021-07-05 13:24:37,682 INFO    : epoch   6: train D loss: 0.2505, train F loss: 2.1971, acc 0.1029
+2021-07-05 13:24:42,958 INFO    : epoch   7: train D loss: 0.2586, train F loss: 2.1975, acc 0.1018
+2021-07-05 13:24:48,225 INFO    : epoch   8: train D loss: 0.2132, train F loss: 2.1992, acc 0.0863
+2021-07-05 13:24:53,554 INFO    : epoch   9: train D loss: 0.1879, train F loss: 2.1975, acc 0.1051
+2021-07-05 13:24:58,798 INFO    : epoch  10: train D loss: 0.1993, train F loss: 2.1981, acc 0.0951

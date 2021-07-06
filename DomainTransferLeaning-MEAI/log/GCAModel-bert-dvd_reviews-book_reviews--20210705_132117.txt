@@ -1,0 +1,14 @@
+2021-07-05 13:21:17,306 INFO    : log id: 20210705_132117
+2021-07-05 13:21:17,306 INFO    : 2-way-1-shot Few-Shot Relation Classification
+2021-07-05 13:21:17,307 INFO    : model: GCAModel
+2021-07-05 13:21:17,307 INFO    : encoder: bert
+2021-07-05 13:21:17,307 INFO    : max_length: 200
+2021-07-05 13:21:17,307 INFO    : ##############################
+2021-07-05 13:21:17,307 INFO    : roberta: None
+2021-07-05 13:21:17,308 INFO    : Q: 1
+2021-07-05 13:21:17,308 INFO    : source domain: dvd_reviews
+2021-07-05 13:21:17,308 INFO    : target domain: book_reviews
+2021-07-05 13:21:17,308 INFO    : start_train_prototypical: -1
+2021-07-05 13:21:17,309 INFO    : start_train_adv: 500000
+2021-07-05 13:21:17,309 INFO    : start_train_dis: -1
+2021-07-05 13:21:17,309 INFO    : ##############################

@@ -1,0 +1,38 @@
+2021-07-05 10:40:41,564 INFO    : log id: 20210705_104041
+2021-07-05 10:40:41,564 INFO    : 2-way-1-shot Few-Shot Relation Classification
+2021-07-05 10:40:41,565 INFO    : model: GCAModel
+2021-07-05 10:40:41,565 INFO    : encoder: bert
+2021-07-05 10:40:41,565 INFO    : max_length: 200
+2021-07-05 10:40:41,565 INFO    : ##############################
+2021-07-05 10:40:41,565 INFO    : roberta: None
+2021-07-05 10:40:41,566 INFO    : Q: 1
+2021-07-05 10:40:41,566 INFO    : source domain: dvd_reviews
+2021-07-05 10:40:41,566 INFO    : target domain: book_reviews
+2021-07-05 10:40:41,566 INFO    : start_train_prototypical: -1
+2021-07-05 10:40:41,566 INFO    : start_train_adv: 500000
+2021-07-05 10:40:41,567 INFO    : start_train_dis: -1
+2021-07-05 10:40:41,567 INFO    : ##############################
+2021-07-05 10:41:08,387 INFO    : step:  300 | source SA loss: 2.229182, source SA accuracy: 9.83%, dis_loss: 0.687747, dis_acc: 50.305556
+2021-07-05 10:41:41,601 INFO    : epoch   0: train D loss: 0.7035, train F loss: 2.2101, acc 0.0983
+2021-07-05 10:42:03,866 INFO    : step:  300 | source SA loss: 2.252099, source SA accuracy: 3.50%, dis_loss: 0.696858, dis_acc: 49.361111
+2021-07-05 10:42:03,867 INFO    : epoch   1: train D loss: 0.6974, train F loss: 2.2191, acc 0.0350
+2021-07-05 10:42:36,640 INFO    : step:  300 | source SA loss: 2.231128, source SA accuracy: 5.28%, dis_loss: 0.689633, dis_acc: 49.388889
+2021-07-05 10:42:37,104 INFO    : epoch   2: train D loss: 0.6967, train F loss: 2.2181, acc 0.0528
+2021-07-05 10:43:10,671 INFO    : step:  300 | source SA loss: 2.245002, source SA accuracy: 10.89%, dis_loss: 0.692502, dis_acc: 49.805556
+2021-07-05 10:43:10,917 INFO    : epoch   3: train D loss: 0.6958, train F loss: 2.2021, acc 0.1089
+2021-07-05 10:43:34,964 INFO    : step:  300 | source SA loss: 2.198442, source SA accuracy: 10.56%, dis_loss: 0.695745, dis_acc: 49.694444
+2021-07-05 10:43:34,965 INFO    : epoch   4: train D loss: 0.6953, train F loss: 2.2011, acc 0.1056
+2021-07-05 10:43:58,491 INFO    : step:  300 | source SA loss: 2.224756, source SA accuracy: 8.94%, dis_loss: 0.702243, dis_acc: 49.472222
+2021-07-05 10:43:58,491 INFO    : epoch   5: train D loss: 0.6953, train F loss: 2.2017, acc 0.0894
+2021-07-05 10:44:22,370 INFO    : step:  300 | source SA loss: 2.178848, source SA accuracy: 9.00%, dis_loss: 0.697600, dis_acc: 50.083333
+2021-07-05 10:44:22,633 INFO    : epoch   6: train D loss: 0.6943, train F loss: 2.1991, acc 0.0900
+2021-07-05 10:44:46,763 INFO    : step:  300 | source SA loss: 2.196992, source SA accuracy: 9.50%, dis_loss: 0.676720, dis_acc: 49.833333
+2021-07-05 10:44:47,108 INFO    : epoch   7: train D loss: 0.6946, train F loss: 2.2018, acc 0.0950
+2021-07-05 10:45:11,160 INFO    : step:  300 | source SA loss: 2.254444, source SA accuracy: 8.39%, dis_loss: 0.695150, dis_acc: 49.583333
+2021-07-05 10:45:11,161 INFO    : epoch   8: train D loss: 0.6946, train F loss: 2.2014, acc 0.0839
+2021-07-05 10:45:35,076 INFO    : step:  300 | source SA loss: 2.214846, source SA accuracy: 7.33%, dis_loss: 0.700727, dis_acc: 50.277778
+2021-07-05 10:45:35,076 INFO    : epoch   9: train D loss: 0.6946, train F loss: 2.2023, acc 0.0733
+2021-07-05 10:45:59,107 INFO    : step:  300 | source SA loss: 2.177872, source SA accuracy: 10.11%, dis_loss: 0.694025, dis_acc: 50.083333
+2021-07-05 10:45:59,534 INFO    : epoch  10: train D loss: 0.6954, train F loss: 2.2007, acc 0.1011
+2021-07-05 10:46:24,179 INFO    : step:  300 | source SA loss: 2.247078, source SA accuracy: 10.61%, dis_loss: 0.695845, dis_acc: 49.750000
+2021-07-05 10:46:24,387 INFO    : epoch  11: train D loss: 0.6947, train F loss: 2.2030, acc 0.1061

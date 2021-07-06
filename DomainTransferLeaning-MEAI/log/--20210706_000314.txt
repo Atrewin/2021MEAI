@@ -1,0 +1,5 @@
+2021-07-06 00:03:14,690 INFO    : log id: 20210706_000314
+2021-07-06 00:03:14,691 INFO    : source domain: data/datasets/train_val/train
+2021-07-06 00:03:14,691 INFO    : target domain: data/datasets/NEU-CLS
+2021-07-06 00:03:14,692 INFO    : ##############################
+2021-07-06 00:07:23,709 INFO    : result on data/datasets/NEU-CLS is 14.5000

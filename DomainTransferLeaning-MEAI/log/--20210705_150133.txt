@@ -1,0 +1,14 @@
+2021-07-05 15:01:33,861 INFO    : log id: 20210705_150133
+2021-07-05 15:01:33,862 INFO    : 2-way-1-shot Few-Shot Relation Classification
+2021-07-05 15:01:33,862 INFO    : model: DAModel
+2021-07-05 15:01:33,862 INFO    : encoder: bert
+2021-07-05 15:01:33,863 INFO    : max_length: 200
+2021-07-05 15:01:33,863 INFO    : ##############################
+2021-07-05 15:01:33,863 INFO    : roberta: None
+2021-07-05 15:01:33,863 INFO    : Q: 1
+2021-07-05 15:01:33,864 INFO    : source domain: data/datasets/train_val
+2021-07-05 15:01:33,864 INFO    : target domain: data/datasets/NEU-CLS
+2021-07-05 15:01:33,864 INFO    : start_train_prototypical: -1
+2021-07-05 15:01:33,864 INFO    : start_train_adv: 500000
+2021-07-05 15:01:33,864 INFO    : start_train_dis: -1
+2021-07-05 15:01:33,865 INFO    : ##############################

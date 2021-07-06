@@ -1,0 +1,6 @@
+2021-07-05 22:49:47,247 INFO    : log id: 20210705_224947
+2021-07-05 22:49:47,247 INFO    : source domain: data/datasets/train_val/train
+2021-07-05 22:49:47,247 INFO    : target domain: data/datasets/NEU-CLS
+2021-07-05 22:49:47,248 INFO    : ##############################
+2021-07-05 22:53:02,274 INFO    : epoch   0: train D loss: 0.7216, train F loss: 2.2028, source_acc 0.1272, target_acc 0.0000
+2021-07-05 22:57:41,790 INFO    : epoch   1: train D loss: 0.7062, train F loss: 2.2109, source_acc 0.1122, target_acc 0.0000
